@@ -1,0 +1,710 @@
+/* Global Styles */
+
+body {
+    font-family: 'WDXL Lubrifont TC', sans-serif;
+    background-color: rgb(25, 58, 157);
+    color: white;
+    line-height: 1.3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: blue;
+}
+
+header div{
+    display: flex;
+}
+
+header div a,
+header div a:visited,
+header div a:hover,
+header div a:active,
+nav ul li a 
+{
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    max-width: 100%;
+    height: 3.5rem;
+}
+
+.logo:hover {
+    animation: flip;
+    animation-duration: 2s;
+    display: inline-block;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+nav ul li {
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+    box-shadow: 0 4px 0.5rem rgba(0, 0, 0, 0.2);
+    border: solid white 1px;
+    transform: translateY(-3px);
+}
+
+.nav-links {
+    background-color: blue;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    font-weight: bold;
+}
+
+.nav-links li a{
+    margin: 0 0.5rem;
+    display: block;
+    padding: 1rem;
+}
+
+.nav-border{
+    border: solid white 1px;
+    background-color: rgb(0, 0, 216);
+}
+
+.box {
+    padding: 1.5rem;
+    border-radius: 14px;
+    margin-top: 1.5rem;
+}
+
+.box:hover {
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-6px);
+    border: solid 1px royalblue;
+}
+
+footer{
+    width: 100%;
+    margin-top: 2rem;
+    background-color: blue;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer i{
+    color:white;
+}
+
+footer i:visited,
+footer i:hover,
+footer i:active {
+    color: rgba(39, 39, 55, 0.567);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* index.php*/
+
+.container-homepage{
+    display: grid;
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding: 2rem 4rem;
+
+    grid-template-areas:
+        "about about photo"
+        "current current current"
+        "tech tech tech"
+        "interests interests stats";
+}
+
+.about{grid-area: about;}
+figure{grid-area: photo;}
+.current{grid-area: current;}
+.tech{grid-area: tech;}
+.interests{grid-area: interests;}
+.stats{grid-area: stats;}
+
+.about, .current, .tech, .interests, .stats{
+    background-color: #2a4aab;
+    color: white;
+}
+
+.about p{
+    line-height: 1.7;
+}
+
+.about p,
+.current ul,
+.tech ul,
+.interests ul,
+.stats ul{
+    font-family: 'Kalam', cursive;
+}
+
+/* Profile image */
+
+.profile-img{
+    width: 23rem;
+    border-radius: 14px;
+    margin-top: 1.5rem;
+}
+
+.profile-img:hover{
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Lists */
+
+.current ul, .stats ul, .interests ul{
+    padding-left: 1.2rem;
+}
+
+.current li,
+.stats li, .interests li{
+    margin-bottom: 0.5rem;
+}
+
+.tech ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    list-style: none;
+    justify-items: center;
+}
+
+.tech ul li figure figcaption{
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+.tech ul li img{
+    height: 4.4rem;
+    transition: transform 0.3s ease;
+}
+
+.tech ul li img:hover {
+    transform: scale(1.2);
+}
+
+/* addEntry.php */
+
+.blog-container {
+    padding: 2rem;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form section */
+.blog-entry {
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    background-color: #2a4aab;
+}
+
+.blog-entry h2{
+    text-align: center;
+}
+
+.blog-entry form{
+    padding: 1rem;
+}
+
+.blog-entry form button{
+    font-family: 'WDXL Lubrifont TC', cursive;
+    font-size: 1rem;
+    background-color: #222;
+    color: white;
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* viewBlog.php */
+
+.blog-view{
+    padding: 2rem;
+    margin: auto;
+    width: 75%;
+}
+
+.blog-view form{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.blog-view form div{
+    display: flex;
+    gap: 2rem;
+}
+
+.blog-view form select, .blog-view form div button {
+    font-family: 'WDXL Lubrifont TC', sans-serif;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.blog-view form div button {
+    background-color: white;
+}
+
+.blog-post-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #456fec;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.blog-post-header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: blue;
+}
+
+.blog-post-header a:hover {
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: rgb(0, 0, 216);
+    transition: all 0.3s ease;
+}
+
+.blog-post {
+    background-color: #456fec;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* login.php & addEntry.php */
+
+.required {
+    color: red;
+}
+
+/* Forms */
+input, textarea {
+    font-family: 'WDXL Lubrifont TC', sans-serif;
+    max-width: 28rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea{
+    min-width: 25rem;
+    width: 100%;
+    height: 12rem;
+    min-height: 4rem;
+    max-height: 25rem;
+    margin-bottom: 0;
+}
+
+input::placeholder, textarea::placeholder{
+    font-family: 'Arial', sans-serif;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}
+
+.buttons{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.buttons button {
+    width: 8rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #1081fa;
+}
+
+button[type="reset"]:hover {
+    background-color: red;
+}
+
+/* contact.html */
+
+.contact {
+    background-color: #2a4aab;
+    margin: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+/* Paragraph spacing */
+.contact p {
+    line-height: 0.1;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.contact ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.contact ul li:hover {
+    background-color: rgba(94, 123, 209, 0.529);
+}
+
+/* Links styling */
+.contact a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.contact a:hover {
+    color: #5e7bd1;
+    font-weight: bold;
+}
+
+/* Icon styling */
+.link-icon {
+    height: 3rem;
+    margin-left: auto;
+    border-radius: 50%;
+}
+
+.link-icon:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.15);
+}
+
+/* education.html & experience.html Global variables */
+
+/* Make boxes semi-transparent */
+.experience,
+.education {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 2rem auto;
+    width: 70%;
+}
+
+.education:hover, .experience:hover{
+    color: white;
+    background-color: rgba(105, 105, 105, 0.529);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.experience img, .education img{
+    height: 4.6rem;
+}
+
+.STDOMS {
+    transition: filter 0.3s;
+}
+
+.education:hover .STDOMS, .experience:hover .STDOMS {
+    filter: invert(1);
+}
+
+.job-header, .education-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.job-header p, .education-header p{
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.education-section, .experience-section {
+    position: relative;
+    background-image: url("../Images/Image-5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+}
+
+/* Section headings */
+.experience-section h1,
+.education-section h1 {
+    text-align: center;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+/* education.html */
+
+.education-header ul{
+    margin: 0;
+    list-style: none;
+}
+
+.education-header ul li{
+    margin-left: 1rem;
+}
+
+/* experience.html */
+
+.experience-section {
+    background-image: url("../Images/Image-4.png");
+}
+
+.experience-section h1.heading-1{
+    text-align: left;
+    margin-left: 10rem;
+    font-size: 2.2rem;
+}
+
+.experience ul {
+    padding-left: 3rem;
+}
+
+/* login.php */
+
+.login-entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    height: fit-content;
+    margin: 2rem auto;
+    justify-items: center;
+    padding: 3rem;
+    border-radius: 10px;
+    background-color: #2a4aab;
+}
+
+.login-entry form button {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    width: 12.5rem;
+    margin: 1.25rem auto;
+}
+
+.login-entry a{
+    text-decoration: none;
+    color: #5e7bd1;
+}
+
+.login-entry a:hover,
+.login-entry a:active{
+    color: #1081fa;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* login.html & addEntry.html Global variables*/
+.error {
+    border: 4px solid red;
+    background-color: #ffe6e6;
+}
+
+/* portfolio.html */
+
+h1.my-p {
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Nabla', sans-serif;
+    /* color: #FF8C00; */
+}
+
+.portfolio-container {
+    color: black;
+    width: 50%;
+    margin-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "python-translator guess-games"
+    "smart-quiz-gen smart-quiz-gen";
+    gap: 1.5rem;
+}
+
+#python-translator{grid-area: python-translator;}
+#guess-games{grid-area: guess-games;}
+#smart-quiz-gen{grid-area: smart-quiz-gen;}
+
+.port-1 {
+    background: url("../Images/Image-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.projects {
+    font-family: 'Bitcount Prop Double', sans-serif;
+    background-color: #ffcf01;
+    border: solid #ba9800 2px;
+}
+
+.projects:hover {
+    background-color: #ffd000d7;
+    border: solid white 1px;
+    transition: all 0.3s ease;
+}
+
+.view-projects {
+    display: block;
+    text-align: center;
+    background-color: #2230F3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.view-projects:hover {
+    background-color: #007bff;
+    transform: scale(1.05);
+}
+
+.projects ul li {
+    margin-left: 2rem;
+}
+
+/* skills.html */
+
+.skills-box{
+    width: 75%;
+    padding: 2rem;
+    margin: 2rem auto;
+    background-color: #2a4aab;
+}
+
+.skills-box h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.skills-box h3{
+    font-size: 1.8rem;
+    color: white;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    justify-items: center;
+}
+
+.skill-item {
+    text-align: center;
+    width: 75%;
+}
+
+.skill-item p, .achievements p {
+    font-family: 'Kalam', cursive;
+    margin: 0;
+}
+
+.skill-item img {
+    height: 5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover img{
+    transform: scale(1.2);
+}
+
+/* Achievements Section */
+.achievements h2{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.achievement-item {
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.achievement-item img {
+    height: auto;
+    max-height: 75vh;
+    max-width: 100%;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+.achievement-item h4 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.achievement-item p {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.skills-container:hover, .achievement-item:hover{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.327);
+    border: solid 1px white;
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover h4, .achievement-item:hover p{
+    color: white;
+}
