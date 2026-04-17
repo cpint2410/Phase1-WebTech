@@ -1,0 +1,6 @@
+html, body, span, h5, h6,
+ul, li, nav, header, footer, article, figure {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
