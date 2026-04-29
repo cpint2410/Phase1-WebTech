@@ -693,9 +693,20 @@ h1.my-p {
     margin-bottom: 1rem;
 }
 
+.achievement-item h5 {
+    font-size: 1.8rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
 .achievement-item p {
     color: black;
     font-size: 1.2rem;
+}
+
+.achievement-item p a{
+    color: black;
+    text-decoration: none;
 }
 
 .skills-container:hover, .achievement-item:hover{
@@ -705,6 +716,11 @@ h1.my-p {
     transition: all 0.3s ease;
 }
 
-.achievement-item:hover h4, .achievement-item:hover p{
+.achievement-item:hover h4, .achievement-item:hover h5, .achievement-item:hover p, .achievement-item:hover p a{
     color: white;
+}
+
+.achievement-item:hover p a{
+    text-decoration: underline;
+    transition: all 0.1s;
 }
