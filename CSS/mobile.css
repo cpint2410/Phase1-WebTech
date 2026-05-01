@@ -223,6 +223,11 @@ h1.my-p {
     font-size: 1.25rem;
 }
 
+.achievement-item h5
+{
+    font-size: 1.2rem;
+}
+
 .achievement-item p {
     font-size: 1rem;
 }
