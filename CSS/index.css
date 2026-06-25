@@ -474,6 +474,7 @@ button[type="reset"]:hover {
     text-align: center;
     font-size: 3.2rem;
     margin-bottom: 2rem;
+    font-weight: bold;
 }
 
 /* education.html */
