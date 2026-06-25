@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education | Chris G Pinto</title>
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="CSS/mobile.css" media="(max-width: 768px)">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bitcount+Prop+Double:wght@242&family=Kalam:wght@300;400;700&family=Nabla&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/mobile.css" media="(max-width: 768px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="icon" href="Chris Pinto_Profile.jpg" type="image/png">
 </head>
-
 <body>
     <header>
         <div>
@@ -39,63 +40,210 @@
         <div class="education-section">
             <h1 class="animate__animated animate__backInUp animate__delay-2s">Education</h1>
 
-            <section class="box education">
-                <div class="education-header">
-                    <a href="https://www.qmul.ac.uk/" target="_blank">
-                        <img src="Images/qmul-logo.png" alt="Queen Mary University of London logo">
-                    </a>
-                    <div>
-                        <h2>BSc Computer Science & Artificial Intelligence (Industrial Experience)</h2>
-                        <h3>Queen Mary University of London</h3>
+            <!-- University Accordion -->
+            <section class="glass-card box education animate__animated animate__fadeInUp animate__delay-2s">
 
-                        <h4>Year 1 Modules</h4>
-                        <ul>
-                            <li>ECS401U - Procedural Programming 2:1 (60.0%)</li>
-                            <li>ECS427U - Professional and Research Practice 1st (90.0%)</li>
-                            <li>ECS404U - Computer Systems and Networks 1st (74.6%)</li>
-                            <li>ECS407U - Logic and Discrete Structures 1st (82.6%)</li>
-                            <li>ECS414U - Object-Oriented Programming TBC</li>
-                            <li>ECS421U - Automata and Formal Languages TBC</li>
-                            <li>ECS417U - Fundamentals of Web Technology TBC</li>
-                            <li>ECS419U - Information System Analysis TBC</li>
-                        </ul>
-                    </div>
+            <div class="education-header">
+                <a href="https://www.qmul.ac.uk/" target="_blank">
+                    <img src="Images/qmul-logo.png" alt="Queen Mary University of London logo">
+                </a>
+                <div>
+                    <h2>BSc Computer Science & Artificial Intelligence (Industrial Experience)</h2>
+                    <h3>Queen Mary University of London</h3>
                     <p>2025 - 2029</p>
                 </div>
-            </section>
+            </div>
 
-            <section class="box education">
-                <div class="education-header">
-                    <a href="https://www.stdoms.ac.uk/" target = "_blank">
-                        <img src="Images/STDOMS logo.png" alt="St Dominic's Sixth Form College logo" class="STDOMS">
-                    </a>
-                    <div>
-                        <h2>A-Levels</h2>
-                        <h3>St. Dominic's Sixth Form College</h3>
+            <div class="accordion" id="uniGradesAccordion">
 
-                        <ul>
-                            <li>Mathematics - A*</li>
-                            <li>Further Mathematics - A</li>
-                            <li>Chemistry - A</li>
-                            <li>Physics - B</li>
-                        </ul>
+                <!-- YEAR 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#year1">
+                            Year 1
+                        </button>
+                    </h2>
+
+                    <div id="year1" class="accordion-collapse collapse show" data-bs-parent="#uniGradesAccordion">
+                        <div class="accordion-body year-section" data-year="1">
+
+                            <!-- Progress Bar -->
+                            <div class="year-progress-container mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span>Year Completion</span>
+                                    <span class="year-progress-text">0%</span>
+                                </div>
+
+                                <div class="progress">
+                                    <div class="progress-bar year-progress-bar"
+                                        role="progressbar"
+                                        style="width: 0%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul>
+                                <li class="uni-module" data-year="1" data-code="ECS401U" data-name="Procedural Programming" data-mark="60"></li>
+                                <li class="uni-module" data-year="1" data-code="ECS427U" data-name="Professional and Research Practice" data-mark="90"></li>
+                                <li class="uni-module" data-year="1" data-code="ECS404U" data-name="Computer Systems and Networks" data-mark="74.6"></li>
+                                <li class="uni-module" data-year="1" data-code="ECS407U" data-name="Logic and Discrete Structures" data-mark="82.6"></li>
+
+                                <li class="uni-module" data-year="1" data-code="ECS414U" data-name="Object-Oriented Programming" data-mark="">
+                                    ECS414U - Object-Oriented Programming (TBC)
+                                </li>
+
+                                <li class="uni-module" data-year="1" data-code="ECS421U" data-name="Automata and Formal Languages" data-mark="">
+                                    ECS421U - Automata and Formal Languages (TBC)
+                                </li>
+
+                                <li class="uni-module" data-year="1" data-code="ECS417U" data-name="Fundamentals of Web Technology" data-mark="">
+                                    ECS417U - Fundamentals of Web Technology (TBC)
+                                </li>
+
+                                <li class="uni-module" data-year="1" data-code="ECS419U" data-name="Information System Analysis" data-mark="">
+                                    ECS419U - Information System Analysis (TBC)
+                                </li>
+                            </ul>
+
+                            <div class="year-average-container"></div>
+                        </div>
                     </div>
-                    <p>2023 - 2025</p>
                 </div>
+
+                <!-- YEAR 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#year2">
+                            Year 2
+                        </button>
+                    </h2>
+
+                    <div id="year2" class="accordion-collapse collapse" data-bs-parent="#uniGradesAccordion">
+                        <div class="accordion-body year-section" data-year="2">
+
+                            <!-- Progress Bar -->
+                            <div class="year-progress-container mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span>Year Completion</span>
+                                    <span class="year-progress-text">0%</span>
+                                </div>
+
+                                <div class="progress">
+                                    <div class="progress-bar year-progress-bar"
+                                        role="progressbar"
+                                        style="width: 0%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul>
+                                <li class="uni-module" data-year="2" data-code="ECS509U" data-name="Probability and Matrices" data-mark="">
+                                    ECS509U - Probability and Matrices (TBC)
+                                </li>
+
+                                <li class="uni-module" data-year="2" data-code="ECS529U" data-name="Algorithms and Data Structures" data-mark="">
+                                    ECS529U - Algorithms and Data Structures (TBC)
+                                </li>
+
+                                <li class="uni-module" data-year="2" data-code="ECS533U" data-name="Introduction to Artificial Intelligence" data-mark="">
+                                    ECS533U - Introduction to Artificial Intelligence (TBC)
+                                </li>
+
+                                <li class="uni-module" data-year="2" data-code="ECS5YYU" data-name="Generative Deep Learning" data-mark="">
+                                    ECS5YYU - Generative Deep Learning (TBC)
+                                </li>
+
+                                <li class="uni-module" data-year="2" data-code="ECS518U" data-name="Operating Systems" data-mark="">
+                                    ECS518U - Operating Systems (TBC)
+                                </li>
+
+                                <li class="uni-module" data-year="2" data-code="ECS535U" data-name="AI for Decision Making" data-mark="">
+                                    ECS535U - AI for Decision Making (TBC)
+                                </li>
+
+                                <li class="uni-module" data-year="2" data-code="ECS537U" data-name="Design and Build Project in Artificial Intelligence" data-mark="">
+                                    ECS537U - Design and Build Project in Artificial Intelligence (TBC)
+                                </li>
+                            </ul>
+
+                            <div class="year-average-container"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YEAR 3 (Industrial Placement) -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#year3">
+                            Year 3
+                        </button>
+                    </h2>
+
+                    <div id="year3" class="accordion-collapse collapse" data-bs-parent="#uniGradesAccordion">
+                        <div class="accordion-body year-section" data-year="3">
+
+                            <!-- Progress Bar -->
+                            <div class="year-progress-container mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span>Year Completion</span>
+                                    <span class="year-progress-text">0%</span>
+                                </div>
+
+                                <div class="progress">
+                                    <div class="progress-bar year-progress-bar"
+                                        role="progressbar"
+                                        style="width: 0%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul>
+                                <li>
+
+                                </li>
+                            </ul>
+
+                            <div class="year-average-container"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             </section>
 
-            <section class="box education">
-                <div class="education-header">
-                    <a href="https://www.ncc.brent.sch.uk/" target="_blank">
-                        <img src="Images/NCC logo.png" alt="Newman Catholic College logo">
-                    </a>
-                    <div>
-                        <h2>GCSEs</h2>
-                        <h3>Newman Catholic College</h3>
-                    </div>
-                    <p>2018 - 2023</p>
+            <!-- A-Levels -->
+        <section class="box education">
+            <div class="education-header">
+                <a href="https://www.stdoms.ac.uk/" target = "_blank">
+                    <img src="Images/STDOMS logo.png" alt="St Dominic's Sixth Form College logo" class="STDOMS">
+                </a>
+                <div>
+                    <h2>A-Levels</h2>
+                    <h3>St. Dominic's Sixth Form College</h3>
+
+                    <ul>
+                        <li>Mathematics - A*</li>
+                        <li>Further Mathematics - A</li>
+                        <li>Chemistry - A</li>
+                        <li>Physics - B</li>
+                    </ul>
                 </div>
-            </section>
+                <p>2023 - 2025</p>
+            </div>
+        </section>
+
+        <section class="box education">
+            <div class="education-header">
+                <a href="https://www.ncc.brent.sch.uk/" target="_blank">
+                    <img src="Images/NCC logo.png" alt="Newman Catholic College logo">
+                </a>
+                <div>
+                    <h2>GCSEs</h2>
+                    <h3>Newman Catholic College</h3>
+                </div>
+                <p>2018 - 2023</p>
+            </div>
+        </section>
         </div>
     </main>
 
@@ -113,7 +261,11 @@
                 <i class="fa-brands fa-linkedin-in fa-3x"></i>
             </a>
         </div>
-        <p>&copy; 2026 Chris G Pinto. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Chris G Pinto. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="JS/gradeCalculator.js"></script>
 </body>
+
 </html>
