@@ -4,3 +4,12 @@ ul, li, nav, header, footer, article, figure {
     padding: 0;
     box-sizing: border-box;
 }
+
+h2{
+    font-weight: bold;
+    margin-top: 0.8rem;
+}
+
+header div a h2{
+    font-size: 1.5rem;
+}
