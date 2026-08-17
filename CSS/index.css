@@ -419,6 +419,18 @@ button[type="reset"]:hover {
 
 /* education.html & experience.html Global variables */
 
+.technologies {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    line-height: 1.6;
+}
+
+.technologies strong {
+    font-weight: 700;
+}
+
+
 /* Make boxes semi-transparent */
 .experience,
 .education {
