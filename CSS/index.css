@@ -455,6 +455,13 @@ button[type="reset"]:hover {
     transition: filter 0.3s;
 }
 
+.RiverGroup {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+
 .education:hover .STDOMS, .experience:hover .STDOMS {
     filter: invert(1);
 }
