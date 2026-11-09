@@ -114,6 +114,7 @@ Visit my portfolio here:
 * Add downloadable CV/Resume
 * Integrate a contact form backend
 * Continue updating projects and achievements
+* Improve keyboard navigation and screen reader accessibility across all portfolio pages
 
 ---
 
